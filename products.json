@@ -1,0 +1,62 @@
+[
+  {
+    "id": "shampoo-kaffirlime-30",
+    "name": "ยาสระผม Kaffir Lime เล็ก",
+    "mood": "Kaffir Lime",
+    "type": "shampoo",
+    "size": "30ml",
+    "price": 89,
+    "image": "images/kaffirlime.jpg",
+    "description": "ยาสระผมสูตรมะกรูด ขนาดพกพา 30ml เหมาะสำหรับทดลองใช้หรือพกติดกระเป๋าเดินทาง"
+  },
+  {
+    "id": "shampoo-kaffirlime-100",
+    "name": "ยาสระผม Kaffir Lime ใหญ่",
+    "mood": "Kaffir Lime",
+    "type": "shampoo",
+    "size": "100ml",
+    "price": 199,
+    "image": "images/kaffirlime.jpg",
+    "description": "ยาสระผมสูตรมะกรูด ขนาด 100ml สำหรับใช้ต่อเนื่องที่บ้าน"
+  },
+  {
+    "id": "shampoo-butterflypea-30",
+    "name": "ยาสระผม Butterfly Pea เล็ก",
+    "mood": "Butterfly Pea",
+    "type": "shampoo",
+    "size": "30ml",
+    "price": 89,
+    "image": "images/butterflypea.jpg",
+    "description": "ยาสระผมสูตรอัญชัน ขนาดพกพา 30ml เหมาะสำหรับทดลองใช้หรือพกติดกระเป๋าเดินทาง"
+  },
+  {
+    "id": "shampoo-butterflypea-100",
+    "name": "ยาสระผม Butterfly Pea ใหญ่",
+    "mood": "Butterfly Pea",
+    "type": "shampoo",
+    "size": "100ml",
+    "price": 199,
+    "image": "images/butterflypea.jpg",
+    "description": "ยาสระผมสูตรอัญชัน ขนาด 100ml สำหรับใช้ต่อเนื่องที่บ้าน"
+  },
+  {
+    "id": "conditioner-kaffirlime",
+    "name": "ครีมนวดผม Kaffir Lime",
+    "mood": "Kaffir Lime",
+    "type": "conditioner",
+    "size": null,
+    "price": 149,
+    "image": "images/kaffirlime.jpg",
+    "description": "ครีมนวดผมกลิ่นมะกรูด ใช้คู่กับยาสระผมสูตรเดียวกันเพื่อความหอมที่ต่อเนื่อง"
+  },
+  {
+    "id": "conditioner-butterflypea",
+    "name": "ครีมนวดผม Butterfly Pea",
+    "mood": "Butterfly Pea",
+    "type": "conditioner",
+    "size": null,
+    "price": 149,
+    "image": "images/butterflypea.jpg",
+    "description": "ครีมนวดผมกลิ่นอัญชัน ใช้คู่กับยาสระผมสูตรเดียวกันเพื่อความหอมที่ต่อเนื่อง"
+  }
+]

@@ -1,0 +1,361 @@
+/* ==========================================================
+   Hair Shampoo — shared theme
+   Premium, quiet, minimal. Cream + deep beige, bronze accent.
+   ========================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Serif+Thai:wght@300;400;500;600&family=Noto+Sans+Thai:wght@300;400;500&display=swap");
+
+:root {
+  /* Base palette */
+  --white: #fdfcf9;
+  --cream: #f6f1e7;
+  --sand: #e9dfcd;
+  --beige-deep: #b9a487;
+  --ink: #3b3329;          /* soft dark brown for text and lines */
+  --ink-soft: #6f6556;
+
+  /* Accent */
+  --bronze: #a9814f;
+  --bronze-light: #c9a97a;
+
+  /* Mood marks (small touches only, never full backgrounds) */
+  --mood-kaffir-lime: #3f5a43;
+  --mood-butterfly-pea: #4a5a70;
+  --mood-color: var(--bronze);
+
+  /* Lines */
+  --line: 1px solid rgba(59, 51, 41, 0.28);
+  --line-light: 1px solid rgba(59, 51, 41, 0.12);
+
+  /* Type */
+  --font-display: "Cormorant Garamond", "Noto Serif Thai", Georgia, serif;
+  --font-serif: "Noto Serif Thai", "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Noto Sans Thai", "Helvetica Neue", Arial, sans-serif;
+
+  /* Spacing scale */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: 4rem;
+  --space-6: 7rem;
+
+  --container: 1120px;
+  --radius: 2px;
+}
+
+/* ---------- Reset / base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.9;
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { display: block; max-width: 100%; height: auto; }
+
+a { color: inherit; text-decoration: none; }
+
+::selection { background: var(--sand); color: var(--ink); }
+
+:focus-visible {
+  outline: 1px solid var(--bronze);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; animation: none !important; }
+}
+
+/* ---------- Typography ---------- */
+h1, h2, h3, h4 {
+  margin: 0 0 var(--space-3);
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+}
+
+h1 { font-size: clamp(2.4rem, 5.5vw, 4rem); font-weight: 400; line-height: 1.2; }
+h2 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); }
+h3 { font-size: 1.35rem; }
+
+p { margin: 0 0 var(--space-3); max-width: 62ch; font-family: var(--font-serif); color: var(--ink-soft); }
+
+.lead { font-size: 1.1rem; line-height: 2; }
+.muted { color: var(--ink-soft); }
+
+/* Small mood-colored line under headings */
+.title-mark::after {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 1px;
+  margin-top: var(--space-2);
+  background: var(--mood-color);
+}
+.text-center .title-mark::after { margin-left: auto; margin-right: auto; }
+
+/* ---------- Layout ---------- */
+.container {
+  width: min(100% - 3rem, var(--container));
+  margin-inline: auto;
+}
+
+.section { padding-block: var(--space-6); }
+.section--cream { background: var(--cream); }
+.section--sand { background: var(--sand); }
+.section + .section { border-top: var(--line-light); }
+
+.text-center { text-align: center; }
+.text-center p { margin-inline: auto; }
+
+.stack > * + * { margin-top: var(--space-3); }
+
+.grid {
+  display: grid;
+  gap: var(--space-5) var(--space-4);
+}
+.grid--2 { grid-template-columns: repeat(2, 1fr); }
+.grid--3 { grid-template-columns: repeat(3, 1fr); }
+
+.divider {
+  border: 0;
+  border-top: var(--line-light);
+  margin: var(--space-5) 0;
+}
+
+/* ---------- Header / nav ---------- */
+.site-header {
+  padding-block: var(--space-3);
+  background: var(--white);
+  border-bottom: var(--line-light);
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+
+.nav { display: flex; gap: var(--space-4); }
+
+.nav a {
+  padding-block: 0.25rem;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  border-bottom: 1px solid transparent;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+.nav a:hover,
+.nav a[aria-current="page"] {
+  color: var(--ink);
+  border-bottom-color: var(--bronze);
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  padding: 0.85rem 2.4rem;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: var(--ink);
+  background: transparent;
+  border: var(--line);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+.btn:hover {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--cream);
+}
+
+.btn--accent { border-color: var(--bronze); color: var(--bronze); }
+.btn--accent:hover { background: var(--bronze); border-color: var(--bronze); color: var(--white); }
+
+.btn--block { display: block; width: 100%; text-align: center; }
+
+.btn:disabled { opacity: 0.45; cursor: not-allowed; }
+
+/* ---------- Mood helpers ---------- */
+.mood-kaffir-lime { --mood-color: var(--mood-kaffir-lime); }
+.mood-butterfly-pea { --mood-color: var(--mood-butterfly-pea); }
+
+.mood-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+.mood-tag::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--mood-color);
+}
+
+/* ---------- Product cards ---------- */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  border: var(--line-light);
+  border-radius: var(--radius);
+  transition: border-color 0.3s ease;
+}
+.product-card:hover { border-color: var(--beige-deep); }
+
+.product-card__image {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--cream);
+}
+.product-card__image img { width: 100%; height: 100%; object-fit: cover; }
+
+.product-card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: var(--space-3);
+}
+
+.product-card__name { font-size: 1.25rem; margin: var(--space-1) 0; }
+
+.product-card__desc {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  margin-bottom: var(--space-3);
+}
+
+.product-card__meta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: auto;
+  margin-bottom: var(--space-3);
+  padding-top: var(--space-2);
+  border-top: var(--line-light);
+}
+
+.product-card__size { font-size: 0.9rem; color: var(--ink-soft); }
+
+.price {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--bronze);
+}
+.price::after { content: " บาท"; font-family: var(--font-sans); font-size: 0.8rem; color: var(--ink-soft); }
+
+/* ---------- Forms (order page) ---------- */
+.field { margin-bottom: var(--space-3); }
+
+.field label {
+  display: block;
+  margin-bottom: var(--space-1);
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+.field input,
+.field textarea,
+.field select {
+  width: 100%;
+  padding: 0.8rem 0;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--ink);
+  background: transparent;
+  border: 0;
+  border-bottom: var(--line);
+  border-radius: 0;
+  transition: border-color 0.3s ease;
+}
+.field input:focus,
+.field textarea:focus,
+.field select:focus {
+  outline: none;
+  border-bottom-color: var(--bronze);
+}
+.field textarea { min-height: 110px; resize: vertical; }
+
+.form-message { margin-top: var(--space-3); font-size: 0.95rem; color: var(--ink-soft); }
+.form-message--error { color: #8a4b3a; }
+
+/* ---------- Order summary ---------- */
+.summary {
+  padding: var(--space-4);
+  background: var(--cream);
+  border: var(--line-light);
+  border-radius: var(--radius);
+}
+.summary__row {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding-block: var(--space-1);
+  border-bottom: var(--line-light);
+}
+.summary__total {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: var(--space-3);
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  padding-block: var(--space-5);
+  background: var(--cream);
+  border-top: var(--line-light);
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+.site-footer p { font-size: 0.9rem; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 960px) {
+  .grid--3 { grid-template-columns: repeat(2, 1fr); }
+  .section { padding-block: var(--space-5); }
+}
+
+@media (max-width: 640px) {
+  :root { --space-5: 3rem; --space-6: 4.5rem; }
+
+  .grid--2,
+  .grid--3 { grid-template-columns: 1fr; }
+
+  .site-header .container { flex-direction: column; gap: var(--space-2); }
+  .nav { gap: var(--space-3); }
+
+  .btn { padding: 0.85rem 1.8rem; }
+  .summary { padding: var(--space-3); }
+}

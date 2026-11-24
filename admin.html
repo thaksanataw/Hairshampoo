@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>รายการสั่งซื้อ | Hair Shampoo</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Page-specific styles (admin) */
+    .table-wrap { overflow-x: auto; }
+
+    #ordersTable {
+      width: 100%;
+      min-width: 760px;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+    #ordersTable th,
+    #ordersTable td {
+      padding: var(--space-2) var(--space-2);
+      text-align: left;
+      vertical-align: top;
+      border-bottom: var(--line-light);
+    }
+    #ordersTable thead th {
+      font-family: var(--font-serif);
+      font-weight: 500;
+      color: var(--ink);
+      border-bottom: var(--line);
+      white-space: nowrap;
+    }
+    #ordersTable td { color: var(--ink-soft); }
+    #ordersTable td:first-child { white-space: nowrap; }
+    #ordersTable tbody tr:hover td { background: var(--cream); }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Hair Shampoo</a>
+      <nav class="nav" aria-label="เมนูหลัก">
+        <a href="index.html">หน้าแรก</a>
+        <a href="product.html">สินค้า</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h1 class="text-center title-mark" style="margin-bottom: var(--space-5);">รายการสั่งซื้อ</h1>
+
+      <div class="table-wrap">
+        <table id="ordersTable">
+          <thead>
+            <tr>
+              <th scope="col">วันเวลา</th>
+              <th scope="col">ชื่อลูกค้า</th>
+              <th scope="col">เบอร์โทร/Line</th>
+              <th scope="col">รายการสินค้า</th>
+              <th scope="col">จำนวนเงินรวม</th>
+              <th scope="col">หมายเหตุ</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container text-center">
+      <p>&copy; 2026 Hair Shampoo</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
