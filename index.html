@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hair Shampoo | ยาสระผมสมุนไพรไทย มะกรูดและอัญชัน</title>
+  <meta name="description" content="ปลุกพลังเส้นผมให้แข็งแรงและมีชีวิตชีวา ด้วยสารสกัดสมุนไพรไทยแท้จากมะกรูดและอัญชัน">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Page-specific styles (home) */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: calc(100vh - 5.5rem);
+      min-height: calc(100svh - 5.5rem);
+      padding-block: var(--space-5);
+      background: var(--cream);
+      border-bottom: var(--line-light);
+    }
+    .hero h1 {
+      max-width: 24em;
+      margin-inline: auto;
+      font-size: clamp(1.8rem, 4.2vw, 3.1rem);
+      line-height: 1.6;
+    }
+    .hero__line { display: block; }
+    .hero .btn { margin-top: var(--space-4); }
+
+    .moods { max-width: 900px; margin-inline: auto; }
+
+    .mood-card {
+      display: flex;
+      flex-direction: column;
+      padding: var(--space-4);
+      border: var(--line-light);
+      border-radius: var(--radius);
+      transition: border-color 0.3s ease;
+    }
+    .mood-card:hover { border-color: var(--mood-color); }
+    .mood-card h3 { margin-bottom: var(--space-3); font-size: 1.9rem; }
+    .mood-card__en {
+      display: block;
+      margin-top: 0.25rem;
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: var(--ink-soft);
+    }
+    .mood-card__more {
+      align-self: flex-start;
+      margin-top: auto;
+      padding-bottom: 0.2rem;
+      border-bottom: 1px solid var(--mood-color);
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Hair Shampoo</a>
+      <nav class="nav" aria-label="เมนูหลัก">
+        <a href="index.html" aria-current="page">หน้าแรก</a>
+        <a href="product.html">สินค้า</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero text-center">
+      <div class="container">
+        <h1 class="title-mark">
+          <span class="hero__line">ปลุกพลังเส้นผมให้แข็งแรงและมีชีวิตชีวา</span>
+          <span class="hero__line">ด้วยสารสกัดสมุนไพรไทยแท้จากมะกรูดและอัญชัน</span>
+          <span class="hero__line">ที่ตอบโจทย์ทุกปัญหาเส้นผมอย่างอ่อนโยน</span>
+        </h1>
+        <a class="btn" href="product.html">ดูสินค้าทั้งหมด</a>
+      </div>
+    </section>
+
+    <section class="section" id="moods">
+      <div class="container">
+        <h2 class="text-center title-mark">เลือกสูตรที่เหมาะกับเส้นผมของคุณ</h2>
+
+        <div class="grid grid--2 moods" style="margin-top: var(--space-5);">
+          <a class="mood-card mood-kaffir-lime" href="product.html?mood=kaffirlime">
+            <h3 class="title-mark">สูตรมะกรูด<span class="mood-card__en">Kaffir Lime</span></h3>
+            <p>มอบสัมผัสเย็นสดชื่นพร้อมกลิ่นหอมซิตรัสของผิวมะกรูดแท้ ช่วยขจัดความมันส่วนเกินบนหนังศีรษะและลดอาการคัน ให้ผมเบาสบายตลอดวัน</p>
+            <span class="mood-card__more">ดูสินค้าสูตรมะกรูด</span>
+          </a>
+
+          <a class="mood-card mood-butterfly-pea" href="product.html?mood=butterflypea">
+            <h3 class="title-mark">สูตรอัญชัน<span class="mood-card__en">Butterfly Pea</span></h3>
+            <p>ผสานคุณค่าจากดอกอัญชันเข้มข้นพร้อมกลิ่นหอมละมุนผ่อนคลาย ช่วยบำรุงรากผมให้แข็งแรง ลดการขาดหลุดร่วง และคืนความดกดำเงางามอย่างเป็นธรรมชาติ</p>
+            <span class="mood-card__more">ดูสินค้าสูตรอัญชัน</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container text-center">
+      <p>&copy; 2026 Hair Shampoo</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
